@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_itoa(unsigned long long n)
+char	*ft_itoa(long long n)
 {
 	int		pos;
 	char	*res;

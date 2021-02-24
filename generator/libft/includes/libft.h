@@ -169,7 +169,7 @@ int						ft_isascii(int c);
 int						ft_isdigit(int c);
 int						ft_isprint(int c);
 int						ft_isspace(int c);
-char					*ft_itoa(unsigned long long n);
+char					*ft_itoa(long long n);
 char					*ft_itoa_base(long int nb, char *base_to);
 int						ft_lstcycle(t_lst *begin);
 void					ft_lstjoin(t_head *head_dest, t_head *head_src);
