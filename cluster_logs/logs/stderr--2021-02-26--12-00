@@ -1,0 +1,13 @@
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=512m; support was removed in 8.0
+/databricks/python/lib/python3.7/site-packages/IPython/config.py:13: ShimWarning: The `IPython.config` package has been deprecated since IPython 4.0. You should import from traitlets.config instead.
+  "You should import from traitlets.config instead.", ShimWarning)
+Fri Feb 26 11:10:05 2021 py4j imported
+Fri Feb 26 11:10:05 2021 Python shell started with PID  1210  and guid  4ed7ed9a2d964db7aec7b4e5c081f050
+Fri Feb 26 11:10:05 2021 Initialized gateway on port 46521
+Fri Feb 26 11:10:09 2021 Python shell executor start
+/databricks/python/lib/python3.7/site-packages/IPython/config.py:13: ShimWarning: The `IPython.config` package has been deprecated since IPython 4.0. You should import from traitlets.config instead.
+  "You should import from traitlets.config instead.", ShimWarning)
+Fri Feb 26 11:11:06 2021 py4j imported
+Fri Feb 26 11:11:06 2021 Python shell started with PID  1266  and guid  8d40cf49a06c4f5d8247225ae0133faa
+Fri Feb 26 11:11:06 2021 Initialized gateway on port 35685
+Fri Feb 26 11:11:08 2021 Python shell executor start
