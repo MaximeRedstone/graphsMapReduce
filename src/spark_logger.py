@@ -5,6 +5,7 @@ import logging
 import logzero
 from logzero import logger
 from datetime import datetime
+import numpy as np
 
 warnings.filterwarnings('ignore')
 
@@ -59,7 +60,8 @@ class SparkLogger():
         job_df = job_df.merge(properties, left_index=True, right_index=True)
         job_df.set_index(['Job ID'], inplace=True)
         job_df.drop(['index_x',	'Properties', 'index_y'], axis=1, inplace=True)
-       
+        job_df['Filename'] = "Not found"
+
         self.job_df = job_df
 
 
@@ -149,11 +151,59 @@ class SparkLogger():
     def write_files(self, root_path):
 
         self.job_df.drop(columns=['Stage Infos'], axis=1, inplace=True)
-        self.job_df.to_csv(os.path.join(root_path, "log_jobs.csv"), sep=";")
-        self.stage_df.to_csv(os.path.join(root_path, "log_stages.csv"), sep=";")
-        self.tasks_df.to_csv(os.path.join(root_path, "log_tasks.csv"), sep=";")
-        self.rdd_info_df.to_csv(os.path.join(root_path, "log_rdds.csv"), sep=";")
-        self.accumulables_df.to_csv(os.path.join(root_path, "log_accumulables.csv"), sep=";")
+
+        list_filenames = self.job_df['Filename'].unique().tolist()
+        list_filenames = [x.split('/')[-1] for x in list_filenames]
+        logger.critical(list_filenames)
+        
+        
+        for filename in list_filenames:
+
+            root_path_run = os.path.join(root_path, filename)
+            if not os.path.exists(root_path_run):
+                os.mkdir(root_path_run)
+            
+            job_df = self.job_df[self.job_df['Filename'] == filename]
+            list_jobs = np.unique(job_df.index.values).tolist()
+
+            stage_df = self.stage_df[self.stage_df['Job ID'].isin(list_jobs)]
+            list_stages = np.unique(stage_df.index.values).tolist()
+
+            tasks_df = self.tasks_df[self.tasks_df['Stage ID'].isin(list_stages)]
+            rdd_info_df = self.rdd_info_df[self.rdd_info_df['Stage ID'].isin(list_stages)]
+       
+            logger.critical(self.accumulables_df)
+            list_tasks = np.unique(tasks_df.index.values).tolist()
+            accumulables_df = self.accumulables_df[self.accumulables_df.index.get_level_values('Task ID').isin(list_tasks)]
+    
+            job_df.to_csv(os.path.join(root_path_run, "log_jobs.csv"), sep=";")
+            stage_df.to_csv(os.path.join(root_path_run, "log_stages.csv"), sep=";")
+            tasks_df.to_csv(os.path.join(root_path_run, "log_tasks.csv"), sep=";")
+            rdd_info_df.to_csv(os.path.join(root_path_run, "log_rdds.csv"), sep=";")
+            accumulables_df.to_csv(os.path.join(root_path_run, "log_accumulables.csv"), sep=";")
+
+
+    def get_filename(self):
+
+        filenames = self.rdd_info_df[self.rdd_info_df['Name'].str.contains("dbfs")]
+        filenames.drop_duplicates(subset=['Name'], keep='first', inplace=True)
+        filenames = filenames[['Name', 'Stage ID']]
+        filenames.set_index(['Name'], inplace=True)
+        filenames.rename({'Stage ID': 'min_stage_id'}, inplace=True, axis=1)
+        filenames['max_stage_id'] = 0
+        for idx in range(len(filenames)):
+            try:
+                filenames.iloc[idx, len(filenames.columns) - 1] = filenames.iloc[idx + 1, len(filenames.columns) - 2] - 1
+            except:
+                filenames.iloc[idx, len(filenames.columns) - 1] = self.stage_df.index.values[len(self.stage_df) - 1]
+
+        stage_jobs = self.stage_df.drop_duplicates(subset=['Job ID'], keep='first', inplace=False)
+        for index_stage, row_stage in stage_jobs.iterrows():
+            for index_filename, row_filename in filenames.iterrows():
+                if index_stage >= row_filename['min_stage_id'] and index_stage <= row_filename['max_stage_id']:
+                    self.job_df.loc[row_stage['Job ID'], 'Filename'] = index_filename.split('/')[-1]
+                    break
+
 
 
     def generate_database(self):
@@ -169,3 +219,5 @@ class SparkLogger():
 
         logger.info("Starting generate_tasks")
         self.generate_tasks()
+
+        self.get_filename()
