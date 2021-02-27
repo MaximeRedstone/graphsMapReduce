@@ -155,7 +155,9 @@ class SparkLogger():
         list_filenames = self.job_df['Filename'].unique().tolist()
         list_filenames = [x.split('/')[-1] for x in list_filenames]
         logger.critical(list_filenames)
-        
+
+        if not os.path.exists(root_path):
+            os.mkdir(root_path)
         
         for filename in list_filenames:
 
