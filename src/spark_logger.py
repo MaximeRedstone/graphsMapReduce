@@ -154,7 +154,7 @@ class SparkLogger():
 
         list_filenames = self.job_df['Filename'].unique().tolist()
         list_filenames = [x.split('/')[-1] for x in list_filenames]
-        logger.critical(list_filenames)
+        logger.info(f"Writing logs for files {list_filenames}")
 
         if not os.path.exists(root_path):
             os.mkdir(root_path)
@@ -174,7 +174,6 @@ class SparkLogger():
             tasks_df = self.tasks_df[self.tasks_df['Stage ID'].isin(list_stages)]
             rdd_info_df = self.rdd_info_df[self.rdd_info_df['Stage ID'].isin(list_stages)]
        
-            logger.critical(self.accumulables_df)
             list_tasks = np.unique(tasks_df.index.values).tolist()
             accumulables_df = self.accumulables_df[self.accumulables_df.index.get_level_values('Task ID').isin(list_tasks)]
     
