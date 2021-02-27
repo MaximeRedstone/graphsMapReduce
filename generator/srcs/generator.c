@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <limits.h>
+#include <float.h>
 #include <unistd.h>
 
 float               get_min_range(t_generator *generator)
@@ -23,11 +24,11 @@ float             get_max_range(t_generator *generator)
     return (ret);
 }
 
-unsigned long long get_avg_len_node(unsigned long long nb_nodes)
+float   get_avg_len_node(float nb_nodes)
 {
-    int                 len;
-    unsigned long long  min_number_len;
-    unsigned long long  total_of_len;
+    int     len;
+    float   min_number_len;
+    float   total_of_len;
 
     if (nb_nodes <= 9LL)
         return nb_nodes;
@@ -37,38 +38,38 @@ unsigned long long get_avg_len_node(unsigned long long nb_nodes)
     return total_of_len + get_avg_len_node(min_number_len - 1);
 }
 
-unsigned long long get_avg_len_line(unsigned long long nb_nodes)
+float    get_avg_len_line(unsigned long long nb_nodes)
 {
-    long double     avg_len_node;
-    long double     avg_len_size;
+    float   avg_len_node;
+    float   avg_len_size;
     
     avg_len_node = get_avg_len_node(nb_nodes) / nb_nodes;
     avg_len_size = 2 + 2 * avg_len_node;
-    return (unsigned long long)(avg_len_size);
+    return (avg_len_size);
 }
 
 void    get_nb_edges(t_generator *generator)
 {
-    unsigned long long  avg_len_line;
-    unsigned long long  nb_edges;
-    unsigned long long  nb_nodes;
-    float               multiplier;
-    float               edges_per_node;
+    float   avg_len_line;
+    float   nb_edges;
+    float   nb_nodes;
+    float   multiplier;
+    float   edges_per_node;
 
     nb_nodes = 2;
-    edges_per_node = ULLONG_MAX;
+    edges_per_node = FLT_MAX;
     while ((edges_per_node <= get_min_range(generator)) || (edges_per_node >= get_max_range(generator)))
     {
         avg_len_line = get_avg_len_line(nb_nodes);
-        // printf("avg_len_line = %llu\n", avg_len_line);
+        // printf("avg_len_line = %f\n", avg_len_line);
         nb_edges = generator->size / avg_len_line;
-        // printf("nb_edges = %llu\n", nb_edges);
-        edges_per_node = (float)nb_edges / (float)nb_nodes;
+        // printf("nb_edges = %f\n", nb_edges);
+        edges_per_node = nb_edges / nb_nodes;
         // printf("edges_per_node = %f\n", edges_per_node);
-        multiplier = (float)edges_per_node / generator->edges_per_node;
+        multiplier = edges_per_node / generator->edges_per_node;
         // printf("multiplier = %f\n", multiplier);
         nb_nodes = nb_nodes * multiplier;
-        // printf("Nb nodes = %llu\n\n", nb_nodes);
+        // printf("Nb nodes = %f\n\n", nb_nodes);
     }
     generator->nb_nodes = nb_nodes;
     generator->approximate_edges = nb_edges;
