@@ -148,7 +148,7 @@ class SparkLogger():
         self.accumulables_df.sort_index(inplace=True)
 
 
-    def write_files(self, root_path):
+    def write_files(self, root_path, comment=""):
 
         self.job_df.drop(columns=['Stage Infos'], axis=1, inplace=True)
 
@@ -161,7 +161,7 @@ class SparkLogger():
         
         for filename in list_filenames:
 
-            root_path_run = os.path.join(root_path, filename)
+            root_path_run = os.path.join(root_path, filename + comment)
             if not os.path.exists(root_path_run):
                 os.mkdir(root_path_run)
             
