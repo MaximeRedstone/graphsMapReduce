@@ -6,73 +6,77 @@
 #include <float.h>
 #include <unistd.h>
 
-float               get_min_range(t_generator *generator)
+long double               get_min_range(t_generator *generator)
 {
-    float   ret;
+    long double   ret;
 
-    ret = ((float)(1 - ERROR_MARGIN) * (float)generator->edges_per_node);
-    // printf("min_range = %f\n", ret);
+    ret = ((long double)(1 - ERROR_MARGIN) * (long double)generator->edges_per_node);
+    // printf("min_range = %Lf\n", ret);
     return (ret);
 }
 
-float             get_max_range(t_generator *generator)
+long double             get_max_range(t_generator *generator)
 {
-    float   ret;
+    long double   ret;
 
-    ret = ((float)(1 + ERROR_MARGIN) * (float)generator->edges_per_node);
-    // printf("max_range = %f\n", ret);
+    ret = ((long double)(1 + ERROR_MARGIN) * (long double)generator->edges_per_node);
+    // printf("max_range = %Lf\n", ret);
     return (ret);
 }
 
-float   get_avg_len_node(float nb_nodes)
+long double   get_avg_len_node(long double nb_nodes)
 {
-    int     len;
-    float   min_number_len;
-    float   total_of_len;
+    int                 len;
+    long double         min_number_len;
+    long double         total_of_len;
 
-    if (nb_nodes <= 9LL)
+    // printf("In get_avg_len_node with nb_nodes %Lf\n", nb_nodes);
+    if (nb_nodes <= 9.0)
         return nb_nodes;
     len = ft_strlen(ft_itoa(nb_nodes));
     min_number_len = ft_pow(10, len - 1);
-    total_of_len = len * (nb_nodes - min_number_len + 1);
-    return total_of_len + get_avg_len_node(min_number_len - 1);
+    total_of_len = len * (nb_nodes - min_number_len + 1.0);
+    return total_of_len + get_avg_len_node(min_number_len - 1.0);
 }
 
-float    get_avg_len_line(unsigned long long nb_nodes)
+long double    get_avg_len_line(unsigned long long nb_nodes)
 {
-    float   avg_len_node;
-    float   avg_len_size;
+    long double     avg_len_node;
+    long double     avg_len_size;
     
     avg_len_node = get_avg_len_node(nb_nodes) / nb_nodes;
     avg_len_size = 2 + 2 * avg_len_node;
+    // printf("Average length of line %Lf\n", avg_len_size);
     return (avg_len_size);
 }
 
 void    get_nb_edges(t_generator *generator)
 {
-    float   avg_len_line;
-    float   nb_edges;
-    float   nb_nodes;
-    float   multiplier;
-    float   edges_per_node;
+    long double   avg_len_line;
+    long double   nb_edges;
+    long double   nb_nodes;
+    long double   multiplier;
+    long double   edges_per_node;
 
-    nb_nodes = 2;
+    nb_nodes = 2.0;
     edges_per_node = FLT_MAX;
     while ((edges_per_node <= get_min_range(generator)) || (edges_per_node >= get_max_range(generator)))
     {
         avg_len_line = get_avg_len_line(nb_nodes);
-        // printf("avg_len_line = %f\n", avg_len_line);
+        // printf("avg_len_line = %Lf\n", avg_len_line);
         nb_edges = generator->size / avg_len_line;
-        // printf("nb_edges = %f\n", nb_edges);
+        // printf("nb_edges = %Lf\n", nb_edges);
         edges_per_node = nb_edges / nb_nodes;
-        // printf("edges_per_node = %f\n", edges_per_node);
+        // printf("edges_per_node = %Lf\n", edges_per_node);
         multiplier = edges_per_node / generator->edges_per_node;
-        // printf("multiplier = %f\n", multiplier);
+        // printf("multiplier = %Lf\n", multiplier);
         nb_nodes = nb_nodes * multiplier;
-        // printf("Nb nodes = %f\n\n", nb_nodes);
+        // printf("Nb nodes = %Lf\n\n", nb_nodes);
     }
-    generator->nb_nodes = nb_nodes;
-    generator->approximate_edges = nb_edges;
+    generator->nb_nodes = (unsigned long long)nb_nodes;
+    generator->approximate_edges = (unsigned long long)nb_edges;
+    printf("Final number of nodes is %llu\n", generator->nb_nodes);
+    printf("Final number of edges approximation is %llu\n", generator->approximate_edges);
 }
 
 int     generate_graph(char *filename, t_generator *generator)

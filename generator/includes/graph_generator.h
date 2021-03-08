@@ -22,7 +22,7 @@ typedef struct		        s_generator
 	unsigned long long	    size;
     unsigned long long      already_written;
     unsigned long long      nb_nodes;
-    float                   edges_per_node;
+    long double             edges_per_node;
     unsigned long long      approximate_edges;
     time_t                  start;
 }					        t_generator;

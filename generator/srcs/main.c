@@ -14,8 +14,10 @@ int main(int argc, char **argv)
 	ft_memset(&generator, 0, sizeof(t_generator));
 	if ((error_code = parse_user_args(argc, argv, &generator)) != EXIT_SUCCESS)
 		return exit_failure(error_code);
+	printf("Has parsed user argument\n");
 	if ((error_code = convert_user_input(&generator)) != EXIT_SUCCESS)
 		return exit_failure(error_code);
+	printf("Has converted user argument to bytes\n");
 	if ((error_code = generate_graph(argv[2], &generator)) != EXIT_SUCCESS)
 		return exit_failure(error_code);
 	end = time(0);

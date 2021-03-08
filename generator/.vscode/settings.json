@@ -2,6 +2,7 @@
     "files.associations": {
         "stdlib.h": "c",
         "unistd.h": "c",
-        "chrono": "c"
+        "chrono": "c",
+        "float.h": "c"
     }
 }
