@@ -1,8 +1,0 @@
-2021-02-26T12:07:49.740+0000: [GC (System.gc()) [PSYoungGen: 2064426K->14767K(2285056K)] 2202460K->152801K(7237120K), 0.0203598 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
-2021-02-26T12:07:49.760+0000: [Full GC (System.gc()) [PSYoungGen: 14767K->0K(2285056K)] [ParOldGen: 138034K->145512K(4952064K)] 152801K->145512K(7237120K), [Metaspace: 204893K->204889K(1247232K)], 0.4822018 secs] [Times: user=0.80 sys=0.00, real=0.49 secs] 
-make clean graph_generator
-rm -f .o files
-make fclean graph_generator
-rm -f .o files
-rm -f libft.a
-rm -f ft_printf

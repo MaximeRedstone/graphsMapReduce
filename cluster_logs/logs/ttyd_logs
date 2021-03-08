@@ -1,7 +1,0 @@
-[2021/02/26 11:08:12:1218] N: ttyd 1.6.1 (libwebsockets 4.0.19)
-[2021/02/26 11:08:12:1219] N: tty configuration:
-[2021/02/26 11:08:12:1219] N:   start command: bash --rcfile /databricks/spark/scripts/ttyd/webTerminalBashrc
-[2021/02/26 11:08:12:1219] N:   close signal: SIGHUP (1)
-[2021/02/26 11:08:12:1220] N:   terminal type: xterm-256color
-[2021/02/26 11:08:12:1562] N:  Using foreign event loop...
-[2021/02/26 11:08:12:1563] N:  Listening on port: 7681
