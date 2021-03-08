@@ -128,7 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-data/*
-
 # Large files
 data/com-friendster.ungraph.txt
+data/web-Google.txt
