@@ -151,7 +151,8 @@ class SparkLogger():
     def write_files(self, root_path, comment=""):
 
         self.job_df.drop(columns=['Stage Infos'], axis=1, inplace=True)
-
+        
+        print(f"Jobs head filename = {self.job_df.head()} \n Column Filename Unique = {self.job_df['Filename'].unique().tolist()}")
         list_filenames = self.job_df['Filename'].unique().tolist()
         list_filenames = [x.split('/')[-1] for x in list_filenames]
         logger.info(f"Writing logs for files {list_filenames}")
@@ -160,11 +161,12 @@ class SparkLogger():
             os.mkdir(root_path)
         
         for filename in list_filenames:
-
+            print(f"Creating root_path_run")
             root_path_run = os.path.join(root_path, filename + comment)
             if not os.path.exists(root_path_run):
                 os.mkdir(root_path_run)
             
+            print(f"select jobs for filename {filename}")
             job_df = self.job_df[self.job_df['Filename'] == filename]
             list_jobs = np.unique(job_df.index.values).tolist()
 
@@ -176,12 +178,14 @@ class SparkLogger():
        
             list_tasks = np.unique(tasks_df.index.values).tolist()
             accumulables_df = self.accumulables_df[self.accumulables_df.index.get_level_values('Task ID').isin(list_tasks)]
-    
+
+            print(f"Writing csv files for {root_path_run}")
             job_df.to_csv(os.path.join(root_path_run, "log_jobs.csv"), sep=";")
             stage_df.to_csv(os.path.join(root_path_run, "log_stages.csv"), sep=";")
             tasks_df.to_csv(os.path.join(root_path_run, "log_tasks.csv"), sep=";")
             rdd_info_df.to_csv(os.path.join(root_path_run, "log_rdds.csv"), sep=";")
             accumulables_df.to_csv(os.path.join(root_path_run, "log_accumulables.csv"), sep=";")
+            print(f"Finishing writing csv files for {root_path_run}")
 
 
     def get_filename(self):
