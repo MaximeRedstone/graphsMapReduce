@@ -1,0 +1,4 @@
+# Launched at Thu Jan  1 01:00:00 1970
+# User input was: requested size = 10B, nb_edges_per_node = 5
+# Number of nodes is 0
+# Expected number of edges is 0
