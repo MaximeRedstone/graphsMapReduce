@@ -1,0 +1,19 @@
+Task ID;Attempt;Launch Time;Executor ID;Host;Locality;Speculative;Getting Result Time;Finish Time;Failed;Killed;Stage ID;Duration
+57;0;2021-03-10 10:00:00.210;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:01:12.045;False;False;56;71.835
+56;0;2021-03-10 10:00:00.210;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:01:12.411;False;False;56;72.201
+59;0;2021-03-10 10:01:12.429;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:05:06.092;False;False;57;233.663
+58;0;2021-03-10 10:01:12.429;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:05:32.467;False;False;57;260.038
+61;0;2021-03-10 10:05:32.487;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370793759;2021-03-10 10:06:35.445;False;False;58;62.958
+60;0;2021-03-10 10:05:32.487;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370796808;2021-03-10 10:06:37.741;False;False;58;65.254
+63;0;2021-03-10 10:06:37.860;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:07:45.077;False;False;67;67.217
+62;0;2021-03-10 10:06:37.860;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:07:48.063;False;False;67;70.203
+64;0;2021-03-10 10:07:48.081;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:07:51.632;False;False;68;3.551
+65;0;2021-03-10 10:07:48.081;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:07:53.654;False;False;68;5.573
+67;0;2021-03-10 10:07:53.669;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370877079;2021-03-10 10:07:58.223;False;False;69;4.554
+66;0;2021-03-10 10:07:53.669;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370877679;2021-03-10 10:07:58.506;False;False;69;4.837
+69;0;2021-03-10 10:07:58.608;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:08:02.286;False;False;80;3.678
+68;0;2021-03-10 10:07:58.608;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:08:02.555;False;False;80;3.947
+70;0;2021-03-10 10:08:02.582;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:08:03.247;False;False;81;0.665
+71;0;2021-03-10 10:08:02.583;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;0;2021-03-10 10:08:03.539;False;False;81;0.956
+73;0;2021-03-10 10:08:03.553;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370885791;2021-03-10 10:08:07.018;False;False;82;3.465
+72;0;2021-03-10 10:08:03.553;driver;ip-10-172-243-125.us-west-2.compute.internal;PROCESS_LOCAL;False;1615370885851;2021-03-10 10:08:07.102;False;False;82;3.549
