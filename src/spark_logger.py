@@ -101,8 +101,11 @@ class SparkLogger():
             info_df_list.append(tmp_df)
             
         info_df = pd.concat(info_df_list)
+        print(f"\n\n\n RDD INFO LIST \n\n\n {rdd_info_list}")
         self.rdd_info_df = pd.concat(rdd_info_list)
-        
+        print(f"\n\n\n RDD INFO LIST \n\n\n {self.rdd_info_df.info()}")
+        print(f"\n\n\n RDD NAME LIST \n\n\n {self.rdd_info_df['Name']}")
+
         stage_df.reset_index(inplace=True)
         info_df.reset_index(inplace=True)
 
