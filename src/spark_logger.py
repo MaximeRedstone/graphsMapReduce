@@ -13,9 +13,10 @@ MILL_SECS_TO_SECS = 1000
 
 class SparkLogger():
 
-    def __init__(self, filepath):
+    def __init__(self, filepath, txt_filename):
 
         self.filepath = filepath
+        self.txt_filename = txt_filename
         self.log_df = pd.read_json(self.filepath, lines=True)
 
 
@@ -60,7 +61,7 @@ class SparkLogger():
         job_df = job_df.merge(properties, left_index=True, right_index=True)
         job_df.set_index(['Job ID'], inplace=True)
         job_df.drop(['index_x',	'Properties', 'index_y'], axis=1, inplace=True)
-        job_df['Filename'] = "Not found"
+        job_df['Filename'] = str(self.txt_filename)
 
         self.job_df = job_df
 
@@ -101,10 +102,7 @@ class SparkLogger():
             info_df_list.append(tmp_df)
             
         info_df = pd.concat(info_df_list)
-        print(f"\n\n\n RDD INFO LIST \n\n\n {rdd_info_list}")
         self.rdd_info_df = pd.concat(rdd_info_list)
-        print(f"\n\n\n RDD INFO LIST \n\n\n {self.rdd_info_df.info()}")
-        print(f"\n\n\n RDD NAME LIST \n\n\n {self.rdd_info_df['Name']}")
 
         stage_df.reset_index(inplace=True)
         info_df.reset_index(inplace=True)
@@ -155,7 +153,6 @@ class SparkLogger():
 
         self.job_df.drop(columns=['Stage Infos'], axis=1, inplace=True)
         
-        print(f"Jobs head filename = {self.job_df.head()} \n Column Filename Unique = {self.job_df['Filename'].unique().tolist()}")
         list_filenames = self.job_df['Filename'].unique().tolist()
         list_filenames = [x.split('/')[-1] for x in list_filenames]
         logger.info(f"Writing logs for files {list_filenames}")
@@ -164,12 +161,10 @@ class SparkLogger():
             os.mkdir(root_path)
         
         for filename in list_filenames:
-            print(f"Creating root_path_run")
             root_path_run = os.path.join(root_path, filename + comment)
             if not os.path.exists(root_path_run):
                 os.mkdir(root_path_run)
             
-            print(f"select jobs for filename {filename}")
             job_df = self.job_df[self.job_df['Filename'] == filename]
             list_jobs = np.unique(job_df.index.values).tolist()
 
@@ -193,10 +188,7 @@ class SparkLogger():
 
     def get_filename(self):
 
-        print(f"self.rdd_info_df['Name'].str.contains('dbfs') = {self.rdd_info_df['Name'].str.contains('dbfs')}")
-        print(f"self.rdd_info_df = {self.rdd_info_df.head()}")
         filenames = self.rdd_info_df[self.rdd_info_df['Name'].str.contains("dbfs")]
-        print(f"all filenames are = {filenames}")
         filenames.drop_duplicates(subset=['Name'], keep='first', inplace=True)
         filenames = filenames[['Name', 'Stage ID']]
         filenames.set_index(['Name'], inplace=True)
