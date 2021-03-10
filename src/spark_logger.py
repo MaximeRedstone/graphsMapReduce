@@ -190,7 +190,7 @@ class SparkLogger():
 
     def get_filename(self):
 
-        print(f"self.rdd_info_df['Name'].str.contains('dbfs') = {self.rdd_info_df['Name'].str.contains("dbfs")}")
+        print(f"self.rdd_info_df['Name'].str.contains('dbfs') = {self.rdd_info_df['Name'].str.contains('dbfs')}")
         print(f"self.rdd_info_df = {self.rdd_info_df.head()}")
         filenames = self.rdd_info_df[self.rdd_info_df['Name'].str.contains("dbfs")]
         print(f"all filenames are = {filenames}")
