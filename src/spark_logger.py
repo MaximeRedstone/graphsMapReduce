@@ -152,7 +152,7 @@ class SparkLogger():
 
         self.job_df.drop(columns=['Stage Infos'], axis=1, inplace=True)
         
-        print(f"Jobs head filename = {job_df.head()} \n Column Filename Unique = {self.job_df['Filename'].unique().tolist()}")
+        print(f"Jobs head filename = {self.job_df.head()} \n Column Filename Unique = {self.job_df['Filename'].unique().tolist()}")
         list_filenames = self.job_df['Filename'].unique().tolist()
         list_filenames = [x.split('/')[-1] for x in list_filenames]
         logger.info(f"Writing logs for files {list_filenames}")
