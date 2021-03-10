@@ -190,7 +190,10 @@ class SparkLogger():
 
     def get_filename(self):
 
+        print(f"self.rdd_info_df['Name'].str.contains('dbfs') = {self.rdd_info_df['Name'].str.contains("dbfs")}")
+        print(f"self.rdd_info_df = {self.rdd_info_df.head()}")
         filenames = self.rdd_info_df[self.rdd_info_df['Name'].str.contains("dbfs")]
+        print(f"all filenames are = {filenames}")
         filenames.drop_duplicates(subset=['Name'], keep='first', inplace=True)
         filenames = filenames[['Name', 'Stage ID']]
         filenames.set_index(['Name'], inplace=True)
@@ -206,6 +209,7 @@ class SparkLogger():
         for index_stage, row_stage in stage_jobs.iterrows():
             for index_filename, row_filename in filenames.iterrows():
                 if index_stage >= row_filename['min_stage_id'] and index_stage <= row_filename['max_stage_id']:
+                    print(f"index filename = {index_filename}")
                     self.job_df.loc[row_stage['Job ID'], 'Filename'] = index_filename.split('/')[-1]
                     break
 
