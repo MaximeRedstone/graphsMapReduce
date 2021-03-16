@@ -1,0 +1,16 @@
+Job ID;Submission Time;Stage IDs;Completion Time;Job Result;Duration;spark.job.interruptOnCancel;spark.databricks.api.url;spark.rdd.scope;callSite.short;spark.rdd.scope.noOverride;spark.job.description;spark.databricks.replId;spark.jobGroup.id;spark.databricks.notebook.id;spark.databricks.isolationID;spark.databricks.inherited.credentials.keys.spark.databricks.api.token;spark.databricks.notebook.path;spark.databricks.token;Filename
+15;2021-03-10 19:03:05.078;[117, 114, 118, 115, 119, 111, 112, 116, 113];2021-03-10 19:10:30.215;{'Result': 'JobSucceeded'};445.137;true;https://community.cloud.databricks.com;"{""id"":""241"",""name"":""collect""}";collect at <command-1341553813220844>:78;true;"user_inputs = {
+  ""45M"": 5,
+}
+
+for k, v in user...";ReplId-78867-84e5b-17381-e;8684761209361610782_8340504213308695085_fbff3f08260442dc8e1a9e501a2960b8;193306450925006;cd120d2f-47bc-408a-85f7-af77cad4fcd0;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_45M.txt
+16;2021-03-10 19:10:31.432;[129, 121, 125, 122, 126, 123, 120, 130, 127, 124, 128];2021-03-10 19:11:04.482;{'Result': 'JobSucceeded'};33.05;true;https://community.cloud.databricks.com;"{""id"":""256"",""name"":""collect""}";collect at <command-1341553813220844>:78;true;"user_inputs = {
+  ""45M"": 5,
+}
+
+for k, v in user...";ReplId-78867-84e5b-17381-e;8684761209361610782_8340504213308695085_fbff3f08260442dc8e1a9e501a2960b8;193306450925006;cd120d2f-47bc-408a-85f7-af77cad4fcd0;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_45M.txt
+17;2021-03-10 19:11:04.780;[143, 135, 132, 139, 136, 133, 140, 137, 141, 138, 142, 134, 131];2021-03-10 19:11:24.845;{'Result': 'JobSucceeded'};20.065;true;https://community.cloud.databricks.com;"{""id"":""271"",""name"":""collect""}";collect at <command-1341553813220844>:78;true;"user_inputs = {
+  ""45M"": 5,
+}
+
+for k, v in user...";ReplId-78867-84e5b-17381-e;8684761209361610782_8340504213308695085_fbff3f08260442dc8e1a9e501a2960b8;193306450925006;cd120d2f-47bc-408a-85f7-af77cad4fcd0;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_45M.txt
