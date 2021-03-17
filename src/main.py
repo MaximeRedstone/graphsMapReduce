@@ -14,8 +14,12 @@ parser.add_argument('-p', '--full_path', type=str, help='filepath of json logs',
 args = parser.parse_args()
 
 # filepath = os.path.join("..", "..", "eventlogs", args.eventdir, args.json_filename)
+<<<<<<< HEAD
 filepath = args.full_path
+=======
+>>>>>>> c9b94ef007a0e815d25b56e1dca21b98b896ae17
 root_path = os.path.join("..", "cleaned_logs")
+filepath = os.path.join("..", "eventlog_45M_scala.json")
 
 spark_logger = SparkLogger(filepath, args.txt_filename)
 spark_logger.generate_database()
