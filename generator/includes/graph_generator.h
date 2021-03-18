@@ -4,7 +4,7 @@
 # include "libft.h"
 # include <time.h>
 
-# define WRITE_HEADER 0
+# define WRITE_HEADER 1
 
 # define INCORRECT_NB_ARGUMENTS 1
 # define UNRECOGNIZED_UNIT 2

@@ -1,0 +1,91 @@
+Job ID;Submission Time;Stage IDs;Completion Time;Job Result;Duration;spark.scheduler.pool;spark.databricks.env;spark.job.interruptOnCancel;spark.databricks.api.url;spark.rdd.scope;callSite.short;spark.rdd.scope.noOverride;spark.job.description;spark.databricks.replId;spark.jobGroup.id;spark.databricks.notebook.id;spark.databricks.isolationID;spark.databricks.inherited.credentials.keys.spark.databricks.api.token;spark.databricks.notebook.path;spark.databricks.token;Filename
+0;2021-03-10 11:00:13.310;[0, 1, 2];2021-03-10 11:00:34.821;{'Result': 'JobSucceeded'};21.511;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""7"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+1;2021-03-10 11:00:35.288;[5, 6, 3, 7, 4];2021-03-10 11:01:09.472;{'Result': 'JobSucceeded'};34.184;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""23"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+2;2021-03-10 11:01:10.018;[12, 9, 13, 10, 14, 11, 8];2021-03-10 11:01:48.020;{'Result': 'JobSucceeded'};38.002;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""38"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+3;2021-03-10 11:01:48.775;[15, 19, 16, 20, 17, 21, 18, 22, 23];2021-03-10 11:02:06.063;{'Result': 'JobSucceeded'};17.288;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""53"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+4;2021-03-10 11:02:06.282;[33, 30, 27, 34, 31, 32, 24, 28, 25, 29, 26];2021-03-10 11:02:09.875;{'Result': 'JobSucceeded'};3.593;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""68"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+5;2021-03-10 11:02:10.048;[45, 37, 46, 38, 35, 42, 39, 36, 43, 40, 47, 44, 41];2021-03-10 11:02:13.255;{'Result': 'JobSucceeded'};3.207;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""83"",""name"":""collect""}";collect at <command-193306450925007>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+6;2021-03-10 11:02:13.512;[48, 49, 50];2021-03-10 11:02:30.458;{'Result': 'JobSucceeded'};16.946;7937332512018932044;databricks-python-repl;true;https://community.cloud.databricks.com;"{""id"":""101"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+7;2021-03-10 11:02:30.774;[51, 52, 53, 54, 55];2021-03-10 11:03:04.067;{'Result': 'JobSucceeded'};33.293;;;true;https://community.cloud.databricks.com;"{""id"":""117"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+8;2021-03-10 11:03:04.657;[60, 56, 57, 61, 58, 62, 59];2021-03-10 11:03:40.269;{'Result': 'JobSucceeded'};35.612;;;true;https://community.cloud.databricks.com;"{""id"":""132"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+9;2021-03-10 11:03:40.715;[66, 63, 70, 67, 64, 71, 68, 69, 65];2021-03-10 11:03:57.223;{'Result': 'JobSucceeded'};16.508;;;true;https://community.cloud.databricks.com;"{""id"":""147"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+10;2021-03-10 11:03:57.406;[81, 78, 82, 74, 75, 72, 79, 76, 73, 80, 77];2021-03-10 11:04:00.926;{'Result': 'JobSucceeded'};3.52;;;true;https://community.cloud.databricks.com;"{""id"":""162"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+11;2021-03-10 11:04:01.054;[84, 88, 85, 89, 86, 83, 93, 90, 87, 94, 91, 95, 92];2021-03-10 11:04:03.941;{'Result': 'JobSucceeded'};2.887;;;true;https://community.cloud.databricks.com;"{""id"":""177"",""name"":""collect""}";collect at <command-1341553813220844>:36;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+12;2021-03-10 11:04:04.216;[96, 97, 98];2021-03-10 11:04:21.219;{'Result': 'JobSucceeded'};17.003;;;true;https://community.cloud.databricks.com;"{""id"":""195"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+13;2021-03-10 11:04:21.550;[102, 99, 103, 100, 101];2021-03-10 11:04:51.928;{'Result': 'JobSucceeded'};30.378;;;true;https://community.cloud.databricks.com;"{""id"":""211"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+14;2021-03-10 11:04:52.413;[107, 104, 108, 105, 109, 106, 110];2021-03-10 11:05:28.951;{'Result': 'JobSucceeded'};36.538;;;true;https://community.cloud.databricks.com;"{""id"":""226"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+15;2021-03-10 11:05:29.387;[117, 114, 118, 115, 119, 111, 112, 116, 113];2021-03-10 11:05:45.728;{'Result': 'JobSucceeded'};16.341;;;true;https://community.cloud.databricks.com;"{""id"":""241"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+16;2021-03-10 11:05:45.906;[129, 121, 125, 122, 126, 123, 120, 130, 127, 124, 128];2021-03-10 11:05:49.484;{'Result': 'JobSucceeded'};3.578;;;true;https://community.cloud.databricks.com;"{""id"":""256"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt
+17;2021-03-10 11:05:49.638;[143, 135, 132, 139, 136, 133, 140, 137, 141, 138, 142, 134, 131];2021-03-10 11:05:52.337;{'Result': 'JobSucceeded'};2.699;;;true;https://community.cloud.databricks.com;"{""id"":""271"",""name"":""collect""}";collect at <command-1341553813220843>:37;true;"user_inputs = {
+  ""5M"": 5,
+}
+
+for k, v in user_...";ReplId-6e271-1ddab-0c214-c;7937332512018932044_5041081183907971599_77409dad034a47ef9088fc223f92b558;193306450925006;0b2875dc-e6e4-411c-ba86-0c92fab2a481;*********(redacted);/Users/hugo.ehlinger@polytechnique.edu/Graphs/GraphConnectedComponentsFinder;[REDACTED];graph_5M.txt

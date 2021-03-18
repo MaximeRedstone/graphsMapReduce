@@ -1,3 +1,0 @@
-Accumulable ID;Task ID;Name;Update;Value;Internal;Count Failed Values
-4.0;1;internal.metrics.executorRunTime;7544.0;7544.0;True;True
-26.0;1;internal.metrics.input.recordsRead;413890.0;413890.0;True;True
