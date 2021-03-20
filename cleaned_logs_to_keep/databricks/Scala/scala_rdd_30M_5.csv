@@ -1,0 +1,8 @@
+filename,algo_type,loop_counter,command,end_of_command,accum
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,0,start,2021-03-18T15:48:28.532+0000,0
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,1,ded_reduce,2021-03-18T15:49:17.978+0000,3813673
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,2,ded_reduce,2021-03-18T15:51:14.916+0000,7545282
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,3,ded_reduce,2021-03-18T15:54:46.859+0000,14974496
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,4,ded_reduce,2021-03-18T16:06:02.031+0000,19324891
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,5,ded_reduce,2021-03-18T16:08:26.509+0000,750098
+dbfs:/FileStore/graph_30M.txt,scala-rdd-sorted,6,ded_reduce,2021-03-18T16:08:40.834+0000,0
