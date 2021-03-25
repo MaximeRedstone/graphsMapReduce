@@ -1,0 +1,15 @@
+filename,algo_type,loop_counter,command,end_of_command,accum
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,0,start,2021-03-24T22:00:18.165+0000,0
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,1,ded_reduce,2021-03-24T22:01:08.197+0000,2585495
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,2,ded_reduce,2021-03-24T22:02:40.948+0000,5123719
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,3,ded_reduce,2021-03-24T22:05:02.231+0000,10157224
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,4,ded_reduce,2021-03-24T22:09:52.639+0000,11726632
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,5,ded_reduce,2021-03-24T22:10:07.005+0000,315564
+dbfs:/FileStore/graph_20M.txt,scala-rdd-sorted,6,ded_reduce,2021-03-24T22:10:14.638+0000,0
+dbfs:/FileStore/graph_20M.txt,scala-df,0,start,2021-03-24T22:10:15.036+0000,0
+dbfs:/FileStore/graph_20M.txt,scala-df,1,ded_reduce,2021-03-24T22:10:35.601+0000,7756485
+dbfs:/FileStore/graph_20M.txt,scala-df,2,ded_reduce,2021-03-24T22:11:23.015+0000,15371157
+dbfs:/FileStore/graph_20M.txt,scala-df,3,ded_reduce,2021-03-24T22:13:01.693+0000,30471672
+dbfs:/FileStore/graph_20M.txt,scala-df,4,ded_reduce,2021-03-24T22:26:12.626+0000,35179896
+dbfs:/FileStore/graph_20M.txt,scala-df,5,ded_reduce,2021-03-24T22:39:58.936+0000,946692
+dbfs:/FileStore/graph_20M.txt,scala-df,6,ded_reduce,2021-03-24T22:53:58.215+0000,0
