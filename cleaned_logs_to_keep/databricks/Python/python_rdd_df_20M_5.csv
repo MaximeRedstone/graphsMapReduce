@@ -1,0 +1,15 @@
+filename,algo_type,loop_counter,command,end_of_command,accum,length
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,0,start,2021-03-28T14:16:08.150+0000,0,0
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,1,ded_reduce,2021-03-28T14:16:55.184+0000,2585495,2869743
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,2,ded_reduce,2021-03-28T14:20:39.889+0000,5123719,5262992
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,3,ded_reduce,2021-03-28T14:26:25.403+0000,10157224,6108855
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,4,ded_reduce,2021-03-28T14:28:46.168+0000,11726632,473962
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,5,ded_reduce,2021-03-28T14:28:57.818+0000,315564,316180
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-rdd,6,ded_reduce,2021-03-28T14:29:07.227+0000,0,316180
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,0,start,2021-03-28T14:29:07.589+0000,0,0
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,1,ded_reduce,2021-03-28T14:29:46.259+0000,2585495,2869743
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,2,ded_reduce,2021-03-28T14:31:32.006+0000,5123719,5262992
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,3,ded_reduce,2021-03-28T14:34:12.956+0000,10157224,6108855
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,4,ded_reduce,2021-03-28T14:36:38.677+0000,11726632,473962
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,5,ded_reduce,2021-03-28T14:36:55.379+0000,315564,316180
+dbfs:/FileStore/graphsMapReduce/data/graph_20M_5.txt,python-df,6,ded_reduce,2021-03-28T14:37:07.265+0000,0,316180
