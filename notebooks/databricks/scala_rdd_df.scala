@@ -98,6 +98,7 @@ def processGraphSorted(filepath: String, df_logs: DataFrame, logs: Boolean): Dat
   
   def reduce_ccf_sorted(key: Int, values: ListBuffer[Int], accum: LongAccumulator): ListBuffer[(Int, Int)] = {
     
+    println(values)
     val min_value = values.remove(0)
     var ret = ListBuffer[(Int, Int)]()
     if (min_value < key) {
@@ -224,9 +225,6 @@ def graphsDF(filestore_name: String, df_logs: DataFrame, logs:Boolean): DataFram
   df_logs_ret = add_log(df_logs_ret, filestore_name, "scala-df", 0, "start", time, 0, 0)
               
   val reducer = udf {(x: Int, y: Seq[Int]) => reduce_ccf(x, y)}.asNondeterministic()
-//   val testUDF = udf(test _).asNondeterministic()
-//   val reducer = spark.udf.register("abc", (x: Int, y: Seq[Int]) => reduce_ccf(x, y))  
-  
   var extracted_val = 1L
   var loop_counter = 1
   
@@ -291,9 +289,7 @@ def graphsDF(filestore_name: String, df_logs: DataFrame, logs:Boolean): DataFram
 
 // COMMAND ----------
 
-val filename = "graph_50M.txt"
-// val filename = "toy_dataset.txt"
-// val filename = "web-Google.txt"
+val filename = "web-Google.txt"
 
 val filestore_name = "dbfs:/FileStore/" + filename
 dbutils.fs.rm(filestore_name)
@@ -312,24 +308,3 @@ df_logs = graphsDF(filestore_name, df_logs, false)
 // COMMAND ----------
 
 display(df_logs)
-
-// COMMAND ----------
-
-// MAGIC %sh
-// MAGIC ls
-// MAGIC head -5 graphsMapReduce/data/graph_20M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_20M.txt
-// MAGIC head -5 graphsMapReduce/data/graph_40M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_40M.txt
-// MAGIC head -5 graphsMapReduce/data/graph_60M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_60M.txt
-// MAGIC head -5 graphsMapReduce/data/graph_10M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_10M.txt
-// MAGIC head -5 graphsMapReduce/data/graph_30M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_30M.txt
-// MAGIC head -5 graphsMapReduce/data/graph_50M.txt
-// MAGIC wc -l graphsMapReduce/data/graph_50M.txt
-
-// COMMAND ----------
-
-
