@@ -1,5 +1,0 @@
-RDD ID;Name;Callsite;Parent IDs;Storage Level;Barrier;Number of Partitions;Number of Cached Partitions;Memory Size;Disk Size;Scope;Stage ID
-0;dbfs:/FileStore/graph_10M.txt;textFile at NativeMethodAccessorImpl.java:0;[];{'Use Disk': False, 'Use Memory': False, 'Deserialized': False, 'Replication': 1};False;2;0;0;0;"{""id"":""0"",""name"":""textFile""}";0
-1;dbfs:/FileStore/graph_10M.txt;textFile at NativeMethodAccessorImpl.java:0;[0];{'Use Disk': False, 'Use Memory': False, 'Deserialized': False, 'Replication': 1};False;2;0;0;0;"{""id"":""0"",""name"":""textFile""}";0
-2;PythonRDD;groupByKey at <command-1341553813220844>:112;[1];{'Use Disk': False, 'Use Memory': False, 'Deserialized': False, 'Replication': 1};False;2;0;0;0;;0
-3;PairwiseRDD;groupByKey at <command-1341553813220844>:112;[2];{'Use Disk': False, 'Use Memory': False, 'Deserialized': False, 'Replication': 1};False;2;0;0;0;;0
